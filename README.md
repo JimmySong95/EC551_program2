@@ -17,7 +17,9 @@ Resource Allocation Calculation: Estimate the usage of LUTs and connections, and
 Python 3.x
 
 # Usage
-# 1.first edit input file: input.eqn. This system allows to input a list of logic expressions(in SOP form) to map to FPGA
+# 1.first edit input file: input.eqn. 
+
+This system allows to input a list of logic expressions(in SOP form) to map to FPGA
 
 if you want to handle independent SOP formula, you should edit the input.eqn file like this:
 (A & B & ~C) | (~D & E & F) | (G & ~H)
