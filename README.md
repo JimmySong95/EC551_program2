@@ -22,13 +22,18 @@ Python 3.x
 This system allows to input a list of logic expressions(in SOP form) to map to FPGA
 
 if you want to handle independent SOP formula, you should edit the input.eqn file like this:
+
 (A & B & ~C) | (~D & E & F) | (G & ~H)
+
 (A & ~E & F) | (B & C & D & ~H)
+
 (~A & ~B & C & D) | (E & ~F & G) | (H)
 
 if you want to handle inter-independent SOP formula, you should edit the input.eqn file like this:
 F1 = (A & B) | (~C & D) | (E & ~F)
+
 F2 = (F1 & ~A) | (B & C & ~F1) | (~E & F)
+
 F3 = (~F2 & D) | (A & ~B & E) | (F1 & ~C)
 
 # 2.compile and run
@@ -37,6 +42,9 @@ The system using fpga_simulator.py to handle independent SOP and fpga_inter_depe
 Open the file, Compile and run, then input following parameters:
 
 num_luts = 100             // total number of LUTs
+
 lut_type = 4               // number of inputs for LUTs
+
 num_system_inputs = 6      // how many variables in your SOP
+
 num_system_outputs = 4     // how many outputs in your SOP
