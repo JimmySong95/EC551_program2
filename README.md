@@ -30,6 +30,7 @@ if you want to handle independent SOP formula, you should edit the input.eqn fil
 (~A & ~B & C & D) | (E & ~F & G) | (H)
 
 if you want to handle inter-independent SOP formula, you should edit the input.eqn file like this:
+
 F1 = (A & B) | (~C & D) | (E & ~F)
 
 F2 = (F1 & ~A) | (B & C & ~F1) | (~E & F)
